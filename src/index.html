@@ -2,11 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-
-    <!-- Fontawesome is our recomended library for icons -->
+    <title>Calculator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -15,21 +12,35 @@
     />
   </head>
   <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
-    </div>
+    <div class="calculator">
+    <input type="text" class="display" id="display" readonly placeholder="0">
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+    <div class="buttons">
+  <button class="clear" onclick="clearAll()">C</button>
+  <button onclick="deleteLast()">⌫</button>
+  <button class="operator" onclick="divide()">÷</button>
+  <button class="operator" onclick="multiply()">×</button>
+
+  <button onclick="add('7')">7</button>
+  <button onclick="add('8')">8</button>
+  <button onclick="add('9')">9</button>
+  <button class="operator" onclick="substract()">−</button>
+
+  <button onclick="add('4')">4</button>
+  <button onclick="add('5')">5</button>
+  <button onclick="add('6')">6</button>
+  <button class="operator" onclick="summarize()">+</button>
+
+  <button onclick="add('1')">1</button>
+  <button onclick="add('2')">2</button>
+  <button onclick="add('3')">3</button>
+  <button class="equal" onclick="equals()">=</button>
+
+  <button class="zero" onclick="add('0')">0</button>
+  <button onclick="add('.')">.</button>
+</div>
+  </div>
+
     <script type="module" src="/app.js"></script>
   </body>
 </html>
